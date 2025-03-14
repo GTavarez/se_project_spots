@@ -52,8 +52,7 @@ width: 190px;
   align-self: self-end;
   background-color: rgba(33, 33, 33, 1);
   color:rgba(252, 245, 229, 1);
-
-  }
+}
   @media screen and (max-width:627px) {
     .profile{
       flex-direction: column;
@@ -72,8 +71,8 @@ width: 190px;
       font-size: 20px;
       max-width: 288px;
       text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .profile__column{
       margin-bottom: 20px;
