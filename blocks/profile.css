@@ -9,17 +9,17 @@ margin-right: 20px;
 .profile__column{
   display: flex;
   flex-direction: column;
-
 }
 .profile__name{
   margin: 0 0 12px;
+  font-weight: 500;
 }
 .profile__description{
   margin: 0;
 }
-.profile__edit-btn{
+.profile__edit-button{
   margin-top: auto;
 }
-.profile__add-btn{
+.profile__add-button{
   margin-left: auto;
-}
+  }
