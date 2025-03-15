@@ -1,7 +1,15 @@
 # Project 3: Spots
 
-### Overview  
 
+##describe the project and funcionality
+## Tech Stack
+- HTML
+- CSS
+- Responsive Design
+## Deployment
+This webpage is deployed to Gibthub Pages
+- Deployment link:
+### Overview  
 * Intro  
 * Figma  
 * Images  
