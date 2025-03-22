@@ -12,7 +12,7 @@ The porpose of this project is to create a responsive website that is display ap
 
 This webpage is deployed to Gibthub Pages
 
-- [Deployment link](https://github.com/GTavarez/se_project_spots.git)
+- [Deployment link](https://gtavarez.github.io/se_project_spots/)
 
 ## Figma Link
 
