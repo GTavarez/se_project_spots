@@ -7,7 +7,7 @@ The porpose of this project is to create a responsive website that is display ap
 - HTML
 - CSS
 - Responsive Design
-
+ 
 ## Deployment
 
 This webpage is deployed to Gibthub Pages
