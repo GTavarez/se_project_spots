@@ -44,24 +44,24 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
-  editProfileModal.cardList.add("modal_is-opened");
+  editProfileModal.classList.add("modal_is-opened");
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editProfileModal.cardList.remove("modal_is-opened");
+  editProfileModal.classList.remove("modal_is-opened");
 });
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.cardList.add("modal_is-opened");
+  newPostModal.classList.add("modal_is-opened");
 });
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.cardList.remove("modal_is-opened");
+  newPostModal.classList.remove("modal_is-opened");
 });
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfileModal.cardList.remove("modal_is-opened");
+  editProfileModal.classList.remove("modal_is-opened");
 }
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
