@@ -1,8 +1,6 @@
 .modal {
   visibility: hidden;
   background-color: #00000080;
-  opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
   position: fixed;
   top: 0;
   right: 0;
@@ -13,11 +11,12 @@
   justify-content: center;
   padding: 10px;
 }
-.modal:hover {
+/* .modal:hover {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
-}
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  } */
 .modal_is-opened {
   visibility: visible;
 }

@@ -52,7 +52,7 @@ editProfileBtn.addEventListener("click", function () {
 
 editProfileCloseBtn.addEventListener("click", function () {
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editProfileModal.classList.add("modal_is-opened");
+  editProfileModal.classList.remove("modal_is-opened");
 });
 
 newPostBtn.addEventListener("click", function () {
