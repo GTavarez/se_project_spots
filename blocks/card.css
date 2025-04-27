@@ -33,6 +33,11 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .card__delete-button:hover {
   background-image: url(../images/DeleteHover.svg);
