@@ -1,5 +1,8 @@
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 .card__title {
   font-family: Poppins, Arial, Helvetica, sans-serif;
