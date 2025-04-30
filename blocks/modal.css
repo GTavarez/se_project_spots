@@ -56,14 +56,16 @@
   position: relative;
 }
 .modal__caption {
-  margin: 0;
+  margin: 8px 0 0;
   position: absolute;
-  background-color: rgba(255, 255, 255, 1);
-  height: 24px;
+  background-color: rgba(33, 33, 33, 1);
+  border-radius: 8px;
+  padding: 4px 8px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
+  color: rgba(255, 255, 255, 1);
 }
 .modal__close-btn {
   border: none;
