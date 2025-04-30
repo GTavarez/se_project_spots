@@ -129,13 +129,12 @@ function handleAddCardSubmit(evt) {
     name: imageCaptionInput.value,
     link: imageLinkInput.value,
   };
-  newPostForm.addEventListener("submit", handleAddCardSubmit);
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   newPostForm.reset(); // Clear the form
   closeModal(newPostModal);
 }
-
+newPostForm.addEventListener("submit", handleAddCardSubmit);
 /* addCardFormEl.addEventListener("submit", function (evt) {
   evt.preventDefault();
   const inputValues = {

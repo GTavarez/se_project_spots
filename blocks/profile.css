@@ -45,7 +45,6 @@
   padding: 0;
   display: flex;
   gap: 8px;
-  width: 157px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -60,6 +59,9 @@
 .profile__add-btn {
   margin-left: auto;
   align-self: self-end;
+  padding: 0;
+  width: 157px;
+  height: 52px;
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
   cursor: pointer;
@@ -95,11 +97,11 @@
     font-size: 20px;
     max-width: 288px;
     text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
   }
   .profile__column {
     margin-bottom: 20px;
+    align-items: center;
   }
   .profile__description {
     margin-bottom: 32px;
