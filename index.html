@@ -55,9 +55,9 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
             <img
-              src="./images/close-icon.svg"
+              src="./images/close-icon1.svg"
               alt="An X icon"
-              class="close__btn"
+              class="modal__close-img"
             />
           </button>
           <h2 class="modal__title">Edit profile</h2>
@@ -65,6 +65,7 @@
             <label for="profile-name-input" class="modal__label"
               >Name
               <input
+                required
                 id="profile-name-input"
                 type="text"
                 class="modal__input"
@@ -74,6 +75,7 @@
             <label for="profile-description-input" class="modal__label"
               >Description
               <input
+                required
                 id="profile-description-input"
                 type="text"
                 class="modal__input"
@@ -88,9 +90,9 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
             <img
-              src="./images/close-icon.svg"
+              src="./images/close-icon1.svg"
               alt="An X icon"
-              class="close__btn"
+              class="modal__close-img"
             />
           </button>
           <h2 class="modal__title">New post</h2>
@@ -98,6 +100,7 @@
             <label for="image-link-input" class="modal__label"
               >Image link
               <input
+                required
                 id="image-link-input"
                 type="url"
                 class="modal__input"
@@ -107,6 +110,7 @@
             <label for="image-caption-input" class="modal__label"
               >Caption
               <input
+                required
                 id="image-caption-input"
                 type="text"
                 class="modal__input"
@@ -119,13 +123,13 @@
       </div>
     </div>
 
-    <div class="modal modal_is-opened modal_type_preview" id="preview-modal">
+    <div class="modal modal_type_preview" id="preview-modal">
       <div class="modal__image-container">
         <button
           type="button"
           class="modal__close-btn modal__close-btn_type_preview"
         >
-          <img src="./images/close-icon.svg" alt="An X icon" class="" />
+          <img src="./images/close-icon2.svg" alt="An X icon" class="" />
         </button>
         <img src="#" alt="" class="modal__image" />
         <h2 class="modal__caption"></h2>

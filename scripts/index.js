@@ -63,7 +63,9 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
-  const cardElement = cardTemplate.content.cloneNode(true);
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardLikeBtnEl = cardElement.querySelector(".card__like-button");
@@ -71,7 +73,6 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-button");
-  previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 
   cardLikeBtnEl.addEventListener("click", () => {
     cardLikeBtnEl.classList.toggle("card__like-button_active");
@@ -82,7 +83,6 @@ function getCardElement(data) {
   cardImageEl.addEventListener("click", () => {
     previewImageEl.src = data.link;
     previewImageEl.alt = data.name;
-    cardTitleEl.textContent = data.name;
     previewImageCaptionEl.textContent = data.name;
     openModal(previewModal);
   });
@@ -96,6 +96,7 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
+previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
@@ -124,18 +125,11 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-
-  console.log(imageCaptionInput, imageLinkInput);
-  closeModal(newPostModal);
-}
-newPostForm.addEventListener("submit", handleAddCardSubmit);
-
-function handleAddCardSubmit(evt) {
-  evt.preventDefault();
   const inputValues = {
     name: imageCaptionInput.value,
     link: imageLinkInput.value,
   };
+  newPostForm.addEventListener("submit", handleAddCardSubmit);
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   newPostForm.reset(); // Clear the form

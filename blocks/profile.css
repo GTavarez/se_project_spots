@@ -15,6 +15,7 @@
 }
 .profile__name {
   margin: 0 0 12px;
+  max-width: 420px;
   color: rgba(33, 33, 33, 1);
   font-weight: 500;
   font-size: 32px;
@@ -41,6 +42,10 @@
 }
 .profile__edit-btn {
   margin-top: auto;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  width: 157px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -105,5 +110,8 @@
   }
   .profile__edit-btn {
     margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

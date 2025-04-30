@@ -42,6 +42,7 @@
   background-color: #fff;
   padding: 32px 50px;
   position: relative;
+  box-sizing: border-box;
 }
 .modal__image {
   max-width: 80vw;
@@ -55,7 +56,12 @@
   position: relative;
 }
 .modal__caption {
-  color: #fff;
+  color: rgba(255 255 255 1);
+  height: 24px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
 }
 .modal__close-btn {
   border: none;
@@ -80,6 +86,7 @@
   right: -52.5px;
   width: 40px;
   height: 40px;
+  color: rgba(255 255 255 1);
 }
 
 .modal__form {
@@ -152,7 +159,7 @@
     top: -48px;
     right: 0;
   }
-  .modal_type_preview {
+  .modal__image {
     max-width: unset;
   }
 }
