@@ -56,9 +56,11 @@
   position: relative;
 }
 .modal__caption {
-  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
   height: 24px;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
