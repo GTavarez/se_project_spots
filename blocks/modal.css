@@ -166,4 +166,8 @@
   .modal__image {
     max-width: unset;
   }
+  .modal__caption {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
