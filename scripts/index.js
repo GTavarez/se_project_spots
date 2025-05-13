@@ -102,10 +102,10 @@ previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  resetValidation(editProfileForm, [
-    editProfileNameInput,
-    editProfileDescriptionInput,
-  ]);
+  // resetValidation(editProfileForm, [
+  //   editProfileNameInput,
+  //   editProfileDescriptionInput,
+  // ], validationConfig);
   openModal(editProfileModal);
 });
 

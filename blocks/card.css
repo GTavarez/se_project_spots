@@ -24,6 +24,9 @@
   display: block;
   border-radius: 8px;
 }
+.card__image:hover {
+  cursor: pointer;
+}
 .card__content {
   display: flex;
   align-items: center;
