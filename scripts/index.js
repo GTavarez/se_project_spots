@@ -56,6 +56,9 @@ const previewModal = document.querySelector("#preview-modal");
 const previewCloseBtn = previewModal.querySelector(
   ".modal__close-btn_type_preview"
 );
+editProfileModal.addEventListener("mousedown", handleOverlayClick);
+newPostModal.addEventListener("mousedown", handleOverlayClick);
+previewModal.addEventListener("mousedown", handleOverlayClick);
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewImageCaptionEl = previewModal.querySelector(".modal__caption");
 
@@ -93,9 +96,11 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose)
 }
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
 previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 
@@ -115,6 +120,11 @@ editProfileCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
+  const inputList = Array.from(
+    newPostForm.querySelectorAll(settings.inputSelector)
+  );
+  resetValidation(newPostForm, inputList, settings); // clear errors
+  toggleButtonState(inputList, newPostSubmitBtn, settings); // ensure button is correctly disabled
   openModal(newPostModal);
 });
 newPostCloseBtn.addEventListener("click", function () {
@@ -144,7 +154,19 @@ function handleAddCardSubmit(evt, settings) {
 newPostForm.addEventListener("submit", (evt) =>
   handleAddCardSubmit(evt, settings)
 );
-
+function handleEscClose(evt){
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+function handleOverlayClick (evt){
+if (evt.target === evt.currentTarget) {
+  closeModal(evt.target);
+}
+}
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
