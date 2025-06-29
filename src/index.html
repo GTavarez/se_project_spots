@@ -7,18 +7,21 @@
     <meta name="description" content="Spots website" />
     <meta name="keywords" content="html, css, javascript." />
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="images/Logo.svg" alt="Spot logo" class="header__logo" />
+        <img
+          src="<%=require('./images/Logo.svg')%>"
+          alt="Spot logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            src="<%=require('./images/avatar.jpg')%>"
             alt="Bessie Coleman"
             class="profile__avatar"
           />
@@ -26,11 +29,15 @@
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/pencil.svg" alt="pencil icon" />Edit Profile
+              <img
+                src="<%=require('./images/pencil.svg')%>"
+                alt="pencil icon"
+              />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="plus icon" /> New Post
+            <img src="<%=require('./images/plus.svg')%>" alt="plus icon" /> New
+            Post
           </button>
         </section>
         <section class="cards page__section">
@@ -55,7 +62,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
             <img
-              src="./images/close-icon1.svg"
+              src="<%=require('./images/plus.svg')%>"
               alt="An X icon"
               class="modal__close-img"
             />
@@ -91,9 +98,7 @@
                 class="modal__error"
               ></span>
             </label>
-            <button type="submit" class="modal__submit-btn">
-              Save
-            </button>
+            <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
@@ -101,7 +106,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
             <img
-              src="./images/close-icon1.svg"
+              src="<%=require('./images/close-icon1.svg')%>"
               alt="An X icon"
               class="modal__close-img"
             />
@@ -132,9 +137,7 @@
               />
               <span id="image-caption-input-error" class="modal__error"></span>
             </label>
-            <button type="submit" class="modal__submit-btn">
-              Save
-            </button>
+            <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
@@ -147,7 +150,7 @@
           class="modal__close-btn modal__close-btn_type_preview"
         >
           <img
-            src="./images/close-icon2.svg"
+            src="<%=require('./images/close-icon1.svg')%>"
             alt="An X icon"
             class="modal__close-img"
           />
@@ -156,8 +159,5 @@
         <h2 class="modal__caption"></h2>
       </div>
     </div>
-    <script defer src="./scripts/validation.js"></script>
-
-    <script defer src="./scripts/index.js"></script>
   </body>
 </html>

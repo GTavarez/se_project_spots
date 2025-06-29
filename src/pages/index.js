@@ -1,3 +1,11 @@
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+  disableButton,
+  toggleButtonState,
+} from "../scripts/validation.js";
+import "../pages/index.css";
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -66,6 +74,7 @@ const cardTemplate = document.querySelector("#card-template");
 
 const cardsList = document.querySelector(".cards__list");
 
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -96,7 +105,7 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  document.addEventListener("keydown", handleEscClose)
+  document.addEventListener("keydown", handleEscClose);
 }
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
@@ -154,7 +163,7 @@ function handleAddCardSubmit(evt, settings) {
 newPostForm.addEventListener("submit", (evt) =>
   handleAddCardSubmit(evt, settings)
 );
-function handleEscClose(evt){
+function handleEscClose(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_is-opened");
     if (openedModal) {
@@ -162,12 +171,14 @@ function handleEscClose(evt){
     }
   }
 }
-function handleOverlayClick (evt){
-if (evt.target === evt.currentTarget) {
-  closeModal(evt.target);
-}
+function handleOverlayClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.target);
+  }
 }
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+enableValidation(settings);

@@ -1,4 +1,4 @@
-const settings = {
+export const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
@@ -24,7 +24,7 @@ const hasInvalidInput = (inputList) => {
     return !inputElement.validity.valid;
   });
 };
-const toggleButtonState = (inputList, buttonElement, config) => {
+export const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.disabled = true;
     buttonElement.classList.add(config.inactiveButtonClass);
@@ -33,11 +33,11 @@ const toggleButtonState = (inputList, buttonElement, config) => {
     buttonElement.classList.remove(config.inactiveButtonClass);
   }
 };
-const disableButton = (buttonElement, config) => {
+export const disableButton = (buttonElement) => {
   buttonElement.disabled = true;
 };
 
-const resetValidation = (formElement, inputList, config) => {
+ export const resetValidation = (formElement, inputList, config) => {
   inputList.forEach((input) => {
     hideInputError(formElement, input, config);
   });
@@ -70,11 +70,9 @@ const setEventListeners = (formElement, config) => {
   });
 };
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formElement) => {
     setEventListeners(formElement, config);
   });
 };
-
-enableValidation(settings);
