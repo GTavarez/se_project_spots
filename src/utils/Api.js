@@ -65,7 +65,7 @@ class Api {
       method: "PATCH",
       headers: this.headers,
       body: JSON.stringify({
-        avatar,
+        avatar: avatar.link,
       }),
     }).then((res) => {
       if (res.ok) {
@@ -86,7 +86,7 @@ class Api {
     });
   }
   changeLikeStatus(id, isLiked) {
-    const method = isLiked ? "DELETE" : "PUT";
+    const method = isLiked ? "DELETE" : "PUT"; //true on server
     return fetch(`${this.baseURL}/cards/${id}/likes`, {
       method: method,
       headers: this.headers,

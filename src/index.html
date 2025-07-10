@@ -177,15 +177,16 @@
             class="modal__close-img"
           />
         </button>
-        <h2 class="modal__title">Edit Avatar</h2>
+        <h2 class="modal__title">Edit Profile Avatar</h2>
         <form class="modal__form" id="edit-avatar-btn" novalidate>
           <label for="profile-avatar-input" class="modal__label"
-            >Avatar
+            >Profile Picture
             <input
+              class="modal__input"
               type="url"
               required
               id="profile-avatar-input"
-              placeholder="Avatar goes here"
+              placeholder="Paste the link to an image"
             />
             <span id="profile-avatar-input-error" class="modal__error"></span>
           </label>
@@ -202,7 +203,7 @@
           <img
             src="<%=require('./images/close-icon1.svg')%>"
             alt="An X icon"
-            class="modal__close-img"
+            class="modal__close-img modal__close-img_type_delete"
           />
         </button>
         <h2 class="modal__title">
