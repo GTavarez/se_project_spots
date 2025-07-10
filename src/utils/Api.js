@@ -18,6 +18,21 @@ class Api {
       return Promise.reject(`Error: ${res.status}`);
     });
   }
+  addNewCard({ name, link }) {
+    return fetch(`${this.baseURL}/cards`, {
+      method: "POST",
+      headers: this.headers,
+      body: JSON.stringify({
+        name,
+        link,
+      }),
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
 
   getUserInfo() {
     return fetch(`${this.baseURL}/users/me`, {
@@ -62,6 +77,18 @@ class Api {
   deleteCard(id) {
     return fetch(`${this.baseURL}/cards/${id}`, {
       method: "DELETE",
+      headers: this.headers,
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
+  changeLikeStatus(id, isLiked) {
+    const method = isLiked ? "DELETE" : "PUT";
+    return fetch(`${this.baseURL}/cards/${id}/likes`, {
+      method: method,
       headers: this.headers,
     }).then((res) => {
       if (res.ok) {
