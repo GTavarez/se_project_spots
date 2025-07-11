@@ -59,7 +59,7 @@ const avatarBtn = document.querySelector(".profile__avatar-btn");
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector(".delete__form");
 const deleteCancelBtn = deleteModal.querySelector(".delete__cancel-btn");
-const deleteXBtn = deleteModal.querySelector(".modal__close-img_type_delete");
+const deleteXBtn = deleteModal.querySelector(".modal__close-btn_type_delete");
 deleteCancelBtn.addEventListener("click", () => {
   closeModal(deleteModal);
 });
@@ -273,7 +273,7 @@ function handleAddCardSubmit(evt, settings) {
     .finally(() => {
       //submitBtn.textContent = "Save";
       //setButtonText(submitBtn);
-      setButtonText(submitBtn, "Save");
+      setButtonText(submitBtn, "Saved");
     });
 }
 newPostForm.addEventListener("submit", (evt) =>

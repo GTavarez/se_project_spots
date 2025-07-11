@@ -83,9 +83,15 @@
   cursor: pointer;
   transition: transform 0.3s ease;
   opacity: 0.4;
+  background-image: url(../images/close-icon1.svg);
 }
 .modal__close-btn:hover {
   opacity: 1;
+}
+.modal__close-btn_type_delete {
+  background-image: url(../images/close-icon2.svg);
+  left: calc(100% + 12px);
+  top: 0;
 }
 .modal__close-btn_type_preview {
   position: absolute;
@@ -207,7 +213,6 @@
     margin: 0;
     top: -45px;
     right: 12px;
-    color: rgba(255 255 255 1);
   }
   .delete__buttons {
     flex-direction: column;
