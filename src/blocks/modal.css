@@ -150,11 +150,12 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
+  
 }
 
 .modal__submit-btn_type_disabled {
   opacity: 0.5;
-  cursor: none;
+  cursor: pointer;
 }
 .delete__submit-btn {
   width: 156;
