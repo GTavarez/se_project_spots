@@ -252,16 +252,16 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt, settings) {
   evt.preventDefault();
-  const inputValues = {
-    name: imageCaptionInput.value,
-    link: imageLinkInput.value,
-  };
+
   const submitBtn = evt.submitter;
   //submitBtn.textContent = "Saving...";
   //setButtonText(submitBtn, true);
   setButtonText(submitBtn, "Saving...");
   api
-    .addNewCard(inputValues)
+    .addNewCard({
+      name: imageCaptionInput.value,
+      link: imageLinkInput.value,
+    })
     .then((data) => {
       const cardElement = getCardElement(data);
       cardsList.prepend(cardElement);
@@ -271,7 +271,7 @@ function handleAddCardSubmit(evt, settings) {
     })
     .catch(console.error)
     .finally(() => {
-      //submitBtn.textContent = "Save";
+      //submitBtn.textContent = "Saved";
       //setButtonText(submitBtn);
       setButtonText(submitBtn, "Saved");
     });
