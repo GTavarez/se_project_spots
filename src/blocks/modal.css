@@ -100,6 +100,7 @@
   width: 40px;
   height: 40px;
   color: rgba(255 255 255 1);
+  background-image: url(../images/close-icon2.svg);
 }
 
 .modal__form {
@@ -150,7 +151,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  
 }
 
 .modal__submit-btn_type_disabled {

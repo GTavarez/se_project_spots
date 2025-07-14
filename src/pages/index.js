@@ -210,13 +210,18 @@ function handleAvatarSubmit(evt) {
 }
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
+  const deleteBtn = evt.submitter;
+  setButtonText(deleteBtn, "Deleting...");
   api
     .deleteCard(selectedCardId)
     .then(() => {
       selectedCard.remove();
       closeModal(deleteModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(deleteBtn, "Deleted");
+    });
 }
 function handleDeleteCard(cardElement, cardId) {
   selectedCard = cardElement;
