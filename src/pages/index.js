@@ -281,9 +281,9 @@ function handleAddCardSubmit(evt, settings) {
     })
     .catch(console.error)
     .finally(() => {
-      //submitBtn.textContent = "Saved";
+      //submitBtn.textContent = "Save";
       //setButtonText(submitBtn);
-      setButtonText(submitBtn, "Saved");
+      setButtonText(submitBtn, "Save");
     });
 }
 newPostForm.addEventListener("submit", (evt) =>
