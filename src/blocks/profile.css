@@ -128,6 +128,7 @@
 .profile__add-btn:hover {
   opacity: 80%;
 }
+
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
@@ -143,6 +144,16 @@
   }
   .profile__avatar-btn {
     visibility: visible;
+    border-radius: 6px;
+    background-color: rgba(33, 33, 33, 0.6);
+    width: 23.34px;
+    height: 23.34px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: absolute;
+    right: 4.66px;
+    bottom: 20px;
   }
   .profile__avatar-btn::after {
     content: "";
@@ -170,5 +181,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .profile__avatar {
+    height: 80px;
+    width: 80px;
   }
 }

@@ -12,7 +12,9 @@ import Api from "../utils/Api.js";
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 
 const editProfileModal = document.querySelector("#edit-profile-modal");
+
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
+
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
@@ -39,9 +41,7 @@ const previewModal = document.querySelector("#preview-modal");
 const previewCloseBtn = previewModal.querySelector(
   ".modal__close-btn_type_preview"
 );
-editProfileModal.addEventListener("mousedown", handleOverlayClick);
-newPostModal.addEventListener("mousedown", handleOverlayClick);
-previewModal.addEventListener("mousedown", handleOverlayClick);
+
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewImageCaptionEl = previewModal.querySelector(".modal__caption");
 
@@ -66,6 +66,11 @@ deleteCancelBtn.addEventListener("click", () => {
 deleteXBtn.addEventListener("click", () => {
   closeModal(deleteModal);
 });
+//overlay clicking
+editProfileModal.addEventListener("mousedown", handleOverlayClick);
+newPostModal.addEventListener("mousedown", handleOverlayClick);
+previewModal.addEventListener("mousedown", handleOverlayClick);
+avatarModal.addEventListener("mousedown", handleOverlayClick);
 const api = new Api({
   baseURL: "https://around-api.en.tripleten-services.com/v1",
   headers: {
