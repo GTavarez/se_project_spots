@@ -71,6 +71,7 @@ editProfileModal.addEventListener("mousedown", handleOverlayClick);
 newPostModal.addEventListener("mousedown", handleOverlayClick);
 previewModal.addEventListener("mousedown", handleOverlayClick);
 avatarModal.addEventListener("mousedown", handleOverlayClick);
+deleteModal.addEventListener("mousedown", handleOverlayClick);
 const api = new Api({
   baseURL: "https://around-api.en.tripleten-services.com/v1",
   headers: {
@@ -211,6 +212,7 @@ function handleAvatarSubmit(evt) {
       //submitBtn.textContent = "Save";
       //setButtonText(submitBtn);
       setButtonText(submitBtn, "Save");
+      disableButton(submitBtn, settings);
     });
 }
 function handleDeleteSubmit(evt) {
@@ -225,7 +227,7 @@ function handleDeleteSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(deleteBtn, "Deleted");
+      setButtonText(deleteBtn, "Delete");
     });
 }
 function handleDeleteCard(cardElement, cardId) {
