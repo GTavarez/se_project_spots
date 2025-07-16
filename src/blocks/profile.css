@@ -9,6 +9,7 @@
   border-radius: 8px;
   opacity: 1;
   position: relative;
+  display: block;
 }
 
 .profile__avatar-container {
@@ -137,8 +138,11 @@
     text-align: center;
     padding-top: 20px;
   }
+  .profile__avatar-container {
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
   .profile__avatar {
-    margin: 0 0 12px;
     height: 80px;
     width: 80px;
   }
@@ -153,7 +157,7 @@
     align-items: center;
     position: absolute;
     right: 4.66px;
-    bottom: 20px;
+    bottom: 4.66px;
   }
   .profile__avatar-btn::after {
     content: "";
