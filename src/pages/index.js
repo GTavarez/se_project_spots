@@ -92,7 +92,10 @@ api
     profileDescriptionEl.textContent = userInfo.about;
     profileAvatarEl.src = userInfo.avatar;
   })
-  .catch(console.error);
+  .catch((err) => {
+    alert("Could not get cards or userinfo");
+    console.error(err);
+  });
 
 /* function handleLike(evt, id, isLiked) {
   const btn = evt.target;

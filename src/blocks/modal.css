@@ -225,6 +225,11 @@
     top: -48px;
     right: 0;
   }
+  .modal__close-btn_type_delete {
+    right: 0;
+    top: -50px;
+    left: auto;
+  }
   .modal__image {
     max-width: unset;
   }
