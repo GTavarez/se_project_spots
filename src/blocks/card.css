@@ -76,7 +76,6 @@
 @media screen and (max-width: 627px) {
   .card__title {
     font-size: 16px;
-    line-height: 1;
     max-width: 250px;
   }
   .card__image {

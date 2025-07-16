@@ -4,10 +4,61 @@
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 .profile__avatar {
-  margin-right: 20px;
   height: 190px;
   width: 190px;
   border-radius: 8px;
+  opacity: 1;
+  position: relative;
+  display: block;
+}
+
+.profile__avatar-container {
+  position: relative;
+  margin-right: 20px;
+}
+.profile__avatar-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+  visibility: hidden;
+}
+.profile__avatar-container:hover .profile__avatar-btn {
+  visibility: visible;
+  background-image: url("https://practicum-content.s3.amazonaws.com/resources/avatar_placeholder_1704989734.svg");
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+}
+.profile__avatar-container:hover .profile__avatar-btn::before {
+  visibility: visible;
+  position: absolute;
+  content: "";
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.profile__avatar-btn::after {
+  content: "Edit Avatar";
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  padding-left: 8px;
+  padding-bottom: 12px;
+  z-index: 2;
+}
+
+.profile__pencil-icon {
+  padding-bottom: 12px;
+  z-index: 2;
 }
 .profile__column {
   display: flex;
@@ -78,6 +129,7 @@
 .profile__add-btn:hover {
   opacity: 80%;
 }
+
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
@@ -86,10 +138,29 @@
     text-align: center;
     padding-top: 20px;
   }
+  .profile__avatar-container {
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
   .profile__avatar {
-    margin: 0 0 12px;
     height: 80px;
     width: 80px;
+  }
+  .profile__avatar-btn {
+    visibility: visible;
+    border-radius: 6px;
+    background-color: rgba(33, 33, 33, 0.6);
+    width: 23.34px;
+    height: 23.34px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: absolute;
+    right: 4.66px;
+    bottom: 4.66px;
+  }
+  .profile__avatar-btn::after {
+    content: "";
   }
   .profile__name {
     margin-bottom: 6px;
@@ -114,5 +185,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .profile__avatar {
+    height: 80px;
+    width: 80px;
   }
 }
